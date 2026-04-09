@@ -26,26 +26,28 @@
       height: 100vh;
     }
 
+    /* 🔥 IMAGEM SEM OPACIDADE */
     .background {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.85);
     }
 
+    /* 🔥 OVERLAY MAIS LEVE */
     .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.05));
+      background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.02));
       z-index: 1;
     }
 
+    /* 🔥 LOGO MAIS PRA DIREITA */
     .logo-topo {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 30px;
       z-index: 3;
       width: 420px;
       max-width: 35vw;
@@ -71,6 +73,7 @@
       border-radius: 12px;
     }
 
+    /* 🔥 TEXTO ALTERADO */
     .qr-texto {
       margin-top: 8px;
       font-size: 16px;
@@ -106,13 +109,13 @@
     <img id="imagem" class="background" src="" alt="Imagem da notícia" />
     <div class="overlay"></div>
 
-    <!-- 🔥 LOGO ATUALIZADA -->
+    <!-- LOGO -->
     <img class="logo-topo" src="LOGO.png" alt="Duna News" />
 
+    <!-- QR -->
     <a id="qrLink" class="qr-box" href="#" target="_blank">
-      <!-- 🔥 QR ATUALIZADO -->
       <img id="qrCode" src="QRCODE.png" alt="QR Code" />
-      <div class="qr-texto">Veja a notícia no site</div>
+      <div class="qr-texto">Veja mais no site</div>
     </a>
 
     <div class="conteudo">
@@ -151,7 +154,7 @@
         setInterval(() => {
           indiceAtual = (indiceAtual + 1) % noticias.length;
           mostrarNoticia(indiceAtual);
-        }, 7000); // 🔥 7 segundos
+        }, 7000);
       });
   </script>
 </body>
